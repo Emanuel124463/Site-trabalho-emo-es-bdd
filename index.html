@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#c4170c">
+<meta name="description" content="Trabalhos da turma sobre emoções e saúde mental.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E💛%3C/text%3E%3C/svg%3E">
+<title>Trabalhos Emoções</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topo">
+  <div class="wrap topo-inner">
+    <a class="mini-logo" href="#topo" aria-label="Ir para o início"><span>●</span> Trabalhos Emoções</a>
+    <nav aria-label="Navegação principal">
+      <a class="nav-link active" href="#topo">Início</a>
+      <a class="nav-link" href="#trabalhos">Trabalhos</a>
+      <a class="nav-link" href="#jogos">Jogos</a>
+      <a class="nav-link" href="#apoio">Apoio</a>
+    </nav>
+  </div>
+</div>
+
+<header class="barra" id="topo">
+  <div class="hero-orb orb-one"></div>
+  <div class="hero-orb orb-two"></div>
+  <div class="wrap hero">
+    <div class="hero-copy">
+      <span class="eyebrow"><span class="pulse"></span> Projeto escolar · Saúde mental</span>
+      <h1>Trabalho<br><strong>Emoções</strong></h1>
+      <p>Um espaço para conhecer, compreender e conversar sobre as emoções que fazem parte da nossa vida.</p>
+      <a class="hero-cta" href="#trabalhos">Explorar trabalhos <span>↓</span></a>
+    </div>
+    <div class="hero-emotion" aria-hidden="true">
+      <div class="emotion-orbit orbit-a"></div>
+      <div class="emotion-orbit orbit-b"></div>
+      <div class="hero-face">☺</div>
+      <span class="float-emoji e1">♡</span>
+      <span class="float-emoji e2">✦</span>
+      <span class="float-emoji e3">☁</span>
+    </div>
+  </div>
+</header>
+
+<section class="subbar">
+  <div class="wrap sub-inner">
+    <div><span class="dot"></span> Educação e bem-estar</div>
+    <div class="stats-mini" id="statsMini"></div>
+  </div>
+</section>
+
+<main class="wrap" id="trabalhos">
+  <section class="intro-row">
+    <div>
+      <span class="section-label">Nossa coleção</span>
+      <h2>Conheça os trabalhos</h2>
+      <p>Pesquise por um trabalho, grupo, integrante ou formato.</p>
+    </div>
+    <div class="tools-row">
+      <button class="admin-login-btn" id="abrirLogin" type="button"><span>🔐</span> Entrar</button>
+      <button class="admin-login-btn" id="abrirCriarConta" type="button"><span>＋</span> Criar conta</button>
+      <button class="add-work-btn" id="abrirAdicionar" type="button"><span>＋</span> Adicionar trabalho</button>
+      <div class="search-box">
+        <span aria-hidden="true">⌕</span>
+        <input id="busca" type="search" placeholder="Buscar trabalhos..." aria-label="Buscar trabalhos">
+        <button id="limparBusca" type="button" aria-label="Limpar busca" title="Limpar busca">×</button>
+      </div>
+    </div>
+  </section>
+
+  <div id="conteudo"></div>
+</main>
+
+<section id="jogos" class="games-section"><div class="games-header"><span class="games-badge">🎮 DIVERSÃO</span><h2>Jogos</h2><p>Faça uma pausa e jogue o Dentro da Mente.</p></div><div class="game-card"><div class="game-icon">🎮</div><div class="game-info"><span class="game-label">JOGO</span><h3>Dentro da Mente</h3><p>Abra o jogo em uma nova aba e comece a jogar.</p></div><a class="game-button" href="https://emanuel124463.github.io/Dentro-da-mente/" target="_blank" rel="noopener noreferrer">Jogar agora ↗</a></div></section>
+
+<section class="apoio-destaque" id="apoio">
+  <div class="wrap apoio-inner">
+    <div class="apoio-icon">♥</div>
+    <div>
+      <span class="section-label">Cuidar também é importante</span>
+      <h2>Você não precisa passar por tudo sozinho.</h2>
+      <p>Se você ou alguém que conhece estiver passando por um momento difícil, converse com uma pessoa de confiança. No Brasil, o CVV atende 24 horas, gratuitamente, pelo telefone <strong>188</strong>.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div><strong>Trabalhos Emoções</strong><span>Projeto escolar sobre emoções e saúde mental.</span></div>
+    <span>Feito para aprender, compartilhar e acolher.</span>
+  </div>
+</footer>
+
+<div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
+  <div class="modal-backdrop" data-close-modal></div>
+  <article class="modal-card">
+    <button class="modal-close" type="button" data-close-modal aria-label="Fechar">×</button>
+    <div class="modal-head" id="modalHead">
+      <div class="modal-icon" id="modalIcon"></div>
+      <div><span class="kicker" id="modalKicker"></span><h2 id="modalTitulo"></h2></div>
+    </div>
+    <div class="modal-body">
+      <p id="modalDescricao"></p>
+      <div class="modal-info" id="modalInfo"></div>
+      <a class="modal-link" id="modalLink" href="#" target="_blank" rel="noopener">Abrir trabalho <span>→</span></a>
+    </div>
+  </article>
+</div>
+
+<div class="modal" id="removerModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="removerPainelTitulo">
+  <div class="modal-backdrop" data-close-remove></div>
+  <article class="modal-card remove-card">
+    <button class="modal-close" type="button" data-close-remove aria-label="Fechar">×</button>
+    <div class="remove-header">
+      <span class="remove-badge">!</span>
+      <div>
+        <span class="kicker remove-kicker">Excluir trabalho</span>
+        <h2 id="removerPainelTitulo">Remover trabalho?</h2>
+      </div>
+    </div>
+    <div class="remove-body">
+      <div class="remove-warning"><span>!</span><div><strong>Atenção</strong><p>Você está prestes a remover este trabalho do site. Essa ação não poderá ser desfeita.</p></div></div>
+      <div class="remove-preview">
+        <span class="remove-preview-label">Trabalho selecionado</span>
+        <strong id="removerTitulo">Trabalho</strong>
+        <span id="removerAlunos">Alunos</span>
+      </div>
+      <div class="remove-actions">
+        <button class="secondary-btn" type="button" data-close-remove>Cancelar</button>
+        <button class="danger-btn" id="confirmarRemocao" type="button">Remover trabalho <span>×</span></button>
+      </div>
+    </div>
+  </article>
+</div>
+
+<div class="modal" id="adicionarModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="adicionarTitulo">
+  <div class="modal-backdrop" data-close-add></div>
+  <article class="modal-card add-card">
+    <button class="modal-close" type="button" data-close-add aria-label="Fechar">×</button>
+    <div class="add-header">
+      <span class="add-badge">＋</span>
+      <div><span class="kicker" id="formModalKicker">Novo trabalho</span><h2 id="adicionarTitulo">Adicionar trabalho</h2></div>
+    </div>
+    <div class="form-intro" id="formIntro"><span class="form-intro-dot"></span><div><strong>Preencha os dados do trabalho</strong><small>Os campos marcados com * são obrigatórios.</small></div></div>
+    <form id="formAdicionar" class="add-form">
+      <label for="novoTitulo">Título do trabalho <span>*</span></label>
+      <input id="novoTitulo" name="titulo" type="text" maxlength="120" placeholder="Ex.: A importância da saúde mental" required>
+
+      <label for="novosAlunos">Alunos <span>*</span></label>
+      <input id="novosAlunos" name="alunos" type="text" maxlength="250" placeholder="Ex.: João, Maria e Pedro" required>
+
+      <label for="novoLink">Link do trabalho <small>(opcional)</small></label>
+      <input id="novoLink" name="link" type="url" maxlength="2000" pattern="https?://.+" title="O link deve começar com http:// ou https://" placeholder="https://...">
+      <p class="form-help">Se o trabalho não tiver link ainda, pode deixar este campo vazio.</p>
+
+      <div class="add-actions">
+        <button class="secondary-btn" type="button" data-close-add>Cancelar</button>
+        <button class="primary-btn" id="submitTrabalho" type="submit">Adicionar trabalho <span>→</span></button>
+      </div>
+    </form>
+  </article>
+</div>
+
+<div class="modal" id="loginModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="loginTitulo">
+  <div class="modal-backdrop" data-close-login></div>
+  <article class="modal-card add-card">
+    <button class="modal-close" type="button" data-close-login aria-label="Fechar">×</button>
+    <div class="add-header">
+      <span class="add-badge">🔐</span>
+      <div><span class="kicker">Sua conta</span><h2 id="loginTitulo">Entrar</h2></div>
+    </div>
+    <div class="auth-tabs"><button type="button" class="auth-tab active" data-modo="entrar">Entrar</button><button type="button" class="auth-tab" data-modo="criar">Criar conta</button></div>
+    <div class="form-intro"><span class="form-intro-dot"></span><div><strong id="loginIntroTitulo">Entre na sua conta</strong><small id="loginIntroTexto">Contas de administrador também entram por aqui.</small></div></div>
+    <form id="loginForm" class="add-form">
+      <label for="loginEmail">Usuário <span>*</span></label>
+      <input id="loginEmail" type="text" autocomplete="username" maxlength="60" required placeholder="Seu usuário">
+      <label for="loginPassword">Senha <span>*</span></label>
+      <input id="loginPassword" type="password" autocomplete="current-password" minlength="6" required placeholder="Mínimo de 6 caracteres">
+      <div class="add-actions">
+        <button class="secondary-btn" type="button" data-close-login>Cancelar</button>
+        <button class="primary-btn" id="loginSubmit" type="submit">Entrar <span>→</span></button>
+      </div>
+    </form>
+  </article>
+</div>
+
+<div class="modal" id="adminsModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="adminsTitulo">
+  <div class="modal-backdrop" data-close-admins></div>
+  <article class="modal-card add-card admins-card">
+    <button class="modal-close" type="button" data-close-admins aria-label="Fechar">×</button>
+    <div class="add-header">
+      <span class="add-badge">♟</span>
+      <div><span class="kicker">Controle de acesso</span><h2 id="adminsTitulo">Painel admin</h2></div>
+    </div>
+    <div class="form-intro">
+      <span class="form-intro-dot"></span>
+      <div><strong>Crie contas de administrador</strong><small>Admins podem editar e remover trabalhos. Deixe a senha vazia só se a pessoa já criou a conta.</small></div>
+    </div>
+    <form id="adminForm" class="add-form">
+      <label for="novoAdminEmail">Usuário do novo administrador <span>*</span></label>
+      <input id="novoAdminEmail" type="text" autocomplete="off" maxlength="60" required placeholder="Ex.: Maria">
+      <label for="novoAdminSenha">Senha da nova conta <small>(opcional)</small></label>
+      <input id="novoAdminSenha" type="password" autocomplete="new-password" minlength="6" placeholder="Mínimo de 6 caracteres">
+      <div class="add-actions">
+        <button class="secondary-btn" type="button" data-close-admins>Fechar</button>
+        <button class="primary-btn" type="submit">Criar administrador <span>+</span></button>
+      </div>
+    </form>
+    <div class="admins-list-wrap">
+      <div class="admins-list-title">Administradores atuais</div>
+      <div id="listaAdmins" class="admins-list"></div>
+    </div>
+  </article>
+</div>
+
+<div class="db-status" id="dbStatus" aria-live="polite"></div>
+<!-- Feedback visual -->
+<div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true">
+  <span class="toast-icon" id="toastIcon">✓</span>
+  <span id="toastMessage">Ação concluída com sucesso!</span>
+</div>
+<div class="confetti-container" id="confettiContainer" aria-hidden="true"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
